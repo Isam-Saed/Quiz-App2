@@ -107,7 +107,6 @@ width: 95%; }
     .bullets .spans{
         flex: 1;
         display: flex;
-        justify-content:start;
     }
     .bullets .spans span{
         width: 23px;
@@ -119,6 +118,7 @@ width: 95%; }
         justify-content: center;
         display: flex;
         color:  #e3e7eb;
+       margin-top: 10px;
     }
     .spans span.on{
         background-color:#0075ff;
