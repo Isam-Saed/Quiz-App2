@@ -11,22 +11,33 @@ let countDown = document.querySelector('.countDown');
 let Student = prompt(`Welcome in Quiz App .. Please Enter Your Name.`);
 
 let currentIndex=0;
+let rightAnswer =0;
 let countDownInterval = function(){
     
 }
 
 function getQuestions(){
     let myRequest = new XMLHttpRequest();
-    myRequest.onreadystatechange = function(){
 
+    myRequest.onreadystatechange = function(){
        if(this.readyState === 4 && this.status === 200){
-let questionObject = JSON.parse(this.responseText);
-let QCount = questionObject.length;
-createBullets(QCount);
-addQuestionsData(questionObject[currentIndex],QCount);
-countDownfun(15,QCount)
+        let questionObject = JSON.parse(this.responseText);
+        let QCount = questionObject.length;
+        createBullets(QCount);
+        addQuestionsData(questionObject[currentIndex],QCount);
+        countDownfun(15,QCount);
+        submitButton.onclick=()=>{
+            let theRightAnswer = questionObject[currentIndex].right_answer;
+            currentIndex++;
+            checkAnswer(theRightAnswer,QCount);
+
+            quizArea.innerHTML   ='';
+            answerArea.innerHTML ='';
+            addQuestionsData(questionObject[currentIndex],QCount);
+            handelBullet();
+
+        }
        } 
-       
     }
 
 
@@ -95,4 +106,27 @@ let countDownInterval= setInterval(function(){
     }
 } ,1000)
 }
+}
+
+function checkAnswer(rAnswer,count2){
+let answers = document.getElementsByName('question');
+let theChoosenAnswer ;
+for(var i =0 ; i < answers.length ; i++){
+if(answers[i].checked){theChoosenAnswer = answers[i].dataset.answer}
+}
+if(theChoosenAnswer === rAnswer){
+    rightAnswer++;
+    console.log(`Good Answer isam the right Answer is ${rAnswer}`)
+}
+}
+
+function handelBullet(){
+    let bullitSpans3= document.querySelectorAll('.bullets .spans span');
+    let ArrayOfSpans = Array.from(bullitSpans3);
+    ArrayOfSpans.forEach((span,index)=>{
+        if(currentIndex === index){
+            span.className='on'
+        }
+    })
+
 }
