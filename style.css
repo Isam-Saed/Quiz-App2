@@ -6,7 +6,7 @@
 
 body{
     font-family:  sans-serif;
-    background-color: #104672;
+    background-color: #92c9f7;
      }
 
 
@@ -103,6 +103,7 @@ width: 95%; }
     margin: 20px;
     color:#1a6d81 ;
     font-weight: bold;
+    position: relative;
     }
     .bullets .spans{
         flex: 1;
@@ -144,3 +145,8 @@ width: 95%; }
         font-size: 20px;
     }
     
+    .countDown{
+        background-color: #1a6d81;
+        color: #eaedee;
+right: 0;
+    }
