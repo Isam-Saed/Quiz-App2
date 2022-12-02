@@ -172,6 +172,7 @@ text-align: right;
         .quiz-area h2{
             font-size: 19px;
             font-weight: bold;
+            width: 100%;
         }
     
         }
