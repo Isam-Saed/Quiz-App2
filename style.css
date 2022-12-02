@@ -11,14 +11,14 @@ body{
 
 
     .card{
-        padding-top: 100px;
+        padding-top: 20px;
         color: rgb(38, 67, 163);
-        padding: 15px;
+ 
         background-color: #e3e7eb;
         border-radius: 5px;
         justify-content: center;
         align-items: stretch; 
-        margin-top: 20px; 
+      
     }
     .card .quiz-info {
         width: 100%;
