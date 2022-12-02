@@ -69,6 +69,7 @@ body{
         .answer{
             margin-left: 0;
             padding:8px;
+            
         }
         .answer:not(:last-child){
             border-bottom: 2px solid #1a6d81;
