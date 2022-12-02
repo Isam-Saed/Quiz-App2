@@ -26,16 +26,19 @@ function getQuestions(){
         createBullets(QCount);
         addQuestionsData(questionObject[currentIndex],QCount);
         countDownfun(15,QCount);
+
+
         submitButton.onclick=()=>{
             let theRightAnswer = questionObject[currentIndex].right_answer;
             currentIndex++;
             checkAnswer(theRightAnswer,QCount);
-
             quizArea.innerHTML   ='';
             answerArea.innerHTML ='';
             addQuestionsData(questionObject[currentIndex],QCount);
             handelBullet();
-
+            clearInterval(countDownInterval);
+            countDownfun(15,QCount);
+            showResult(QCount);
         }
        } 
     }
@@ -129,4 +132,24 @@ function handelBullet(){
         }
     })
 
+}
+
+function showResult(count3){
+    let theResults;
+    if(currentIndex === count3){
+        quizArea.remove();
+        answerArea.remove();
+        bullets.remove();
+        submitButton.remove();
+        if(rightAnswer > count3/2 && rightAnswer  < count3){
+            theResults =`<div class="wow wobble"><span class="good  wow fadeInLeft ">Good</span>,You solve ${rightAnswer} from ${count3} Q  Good ${Student} </div>`
+        }
+        else if(rightAnswer === count3){
+            theResults =`<div class="wow wobble"><span class="perfect  wow fadeInLeft ">Perfect</span>, All Answer IS Good ${Student}</div> `
+        }
+        else{
+            theResults =   `<div class="wow wobble"><span class="bad  wow fadeInLeft">Bad</span>,You solve ${rightAnswer} from ${count3} Q bad ${Student} Please agin</div> `
+        }
+        result.innerHTML=theResults;
+}
 }
