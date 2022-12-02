@@ -1,5 +1,14 @@
 [
     {
+        "title":"Which HTML attribute specifies an alternate text for an image, if the image cannot be displayed?",
+       "answer_1":"alt",
+       "answer_2":"src",
+       "answer_3":"title",
+       "answer_4":"none",
+
+    "right_answer":"alt"
+    },
+    {
         "title":"why we use <br> element ?",
         "answer_1":"to make text bold",
         "answer_2":"to make text alone",
