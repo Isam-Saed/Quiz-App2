@@ -70,7 +70,7 @@ if(currentIndex < countQ){
 
     for(let i = 1 ; i<=4; i ++){
 let mainDiv = document.createElement('div');
-mainDiv.className='answer wow fadeInDown';
+mainDiv.className='answer  wow fadeInDown';
 let radioInput = document.createElement('input');
 radioInput.name='question';
 radioInput.type='radio';

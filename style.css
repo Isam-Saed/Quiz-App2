@@ -176,7 +176,7 @@ text-align: right;
         }
         .answer{
             margin-left: 0;
-            padding:8px;
+            height: 70px;
             font-size: 17px;
             font-weight: bold;
         }
