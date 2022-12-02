@@ -13,7 +13,6 @@ body{
     .card{
         padding-top: 20px;
         color: rgb(38, 67, 163);
- 
         background-color: #e3e7eb;
         border-radius: 5px;
         justify-content: center;
@@ -45,14 +44,17 @@ body{
     .quiz-area{
         background-color: #f8f8f8;
         margin: 10px auto;
-        height: 70px;
+        height: 90px;
         color:#1a6d81 ;
         padding: 5px;
         text-align: left;
         width: 100%;
         border-radius: 3px;
+        
     }
-
+    .quiz-area h2{
+        margin-left: 65px;
+    }
     .answer-area{
         padding: 20px;
         margin: 5px auto;
@@ -87,12 +89,16 @@ body{
     cursor: pointer;
     display: block;
     margin: 20px auto;
-    background-color: #0075ff;
+    background-color: #1a6d81;
 border: none;   
 width: 100%; }
 
 .submit-button:focus{
     outline: none;
+}
+.btn:hover{
+    background: none;
+    color: #1a6d81;
 }
 
 .bullets{
@@ -148,3 +154,23 @@ width: 100%; }
     .countDown{
 text-align: right;
     }
+    @media (max-width:500px){
+        .quiz-area{
+            background-color: #f8f8f8;
+            margin: 10px auto;
+            height: 140px;
+            color:#1a6d81 ;
+            
+            text-align: left;
+            width: 100%;
+            border-radius: 3px;
+            display: flex;
+            justify-content: baseline;
+            align-items: center;
+        }
+
+        
+    
+        }
+
+   
