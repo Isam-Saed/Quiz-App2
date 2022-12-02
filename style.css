@@ -169,7 +169,10 @@ text-align: right;
             align-items: center;
         }
 
-        
+        .quiz-area h2{
+            font-size: 25px;
+            font-weight: bold;
+        }
     
         }
 
