@@ -66,7 +66,6 @@ function createBullets(num){
 }
 
 
-
 function addQuestionsData(obj,countQ){
     
     if(currentIndex < countQ){ 
@@ -130,13 +129,13 @@ function showResult(count3){
         bullets.remove();
         submitButton.remove();
         if(rightAnswer > count3/2 && rightAnswer  < count3){
-            theResults =`<div class="wow wobble"><span class="good  wow fadeInLeft ">Good</span>,You solve ${rightAnswer} from ${count3} Q  Good ${Student} </div>`
+            theResults =`<div class="wow wobble"><span class="good  wow fadeInLeft "><i class="fa-solid fa-compact-disc"></i> Good</span>,You solve ${rightAnswer} from ${count3} Q  Good ${Student} </div>`
         }
         else if(rightAnswer === count3){
             theResults =`<div class="wow wobble"><span class="perfect  wow fadeInLeft ">Perfect</span>, All Answer IS Good ${Student}</div> `
         }
         else{
-            theResults =   `<div class="wow wobble"><span class="bad  wow fadeInLeft">Bad</span>,You solve ${rightAnswer} from ${count3} Q bad ${Student} Please agin</div> `
+            theResults =   `<div class="wow wobble"><span class="bad  wow fadeInLeft"><i class="fa-regular fa-face-frown"></i> Bad</span>,You solve ${rightAnswer} from ${count3} Q bad ${Student} Please agin</div> `
         }
         result.innerHTML=theResults;
 }
@@ -150,7 +149,7 @@ if(currentIndex < count4){
         secunds =parseInt(duration %60);
  minutes =minutes<10?`0${minutes}`: minutes;
  secunds =secunds<10?`0${secunds}`: secunds;
-        countDown.innerHTML=`${minutes}:${secunds}`
+        countDown.innerHTML=`<i class="fa-solid fa-clock"></i> ${minutes}:${secunds}`
         if(--duration <0){
             clearInterval(countDownInterval);
             submitButton.click();
